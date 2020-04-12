@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.error-again {
+    animation: nudge .4s linear;
+}
+
+@keyframes nudge {
+    0% {
+      transform: rotate(-3deg);
+    }
+
+    33% {
+      transform: rotate(3deg);
+    }
+
+    66% {
+      transform: rotate(-3deg);
+    }
+}
+
+input:disabled {
+    background-color: #efefef;
+}
+
+button:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.menu-icon {
+    width: 36px;
+    height: 36px;
+}
+
+/*Progress*/
+.demo {
+    flex-direction: column;
+
+
+}
+
+.progress {
+    transform: rotate(-90deg);
+}
+
+.progress__meter,
+.progress__value {
+    fill: none;
+}
+
+.progress__meter {
+    stroke: #e6e6e6;
+}
+
+.progress__value {
+    stroke: #f77a52;
+    stroke-linecap: round;
+}

@@ -10,9 +10,23 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/crypto-js": "^3.1.44",
+    "@types/d3": "^5.7.2",
+    "@types/lodash": "^4.14.149",
+    "axios": "^0.19.2",
+    "bcrpyt": "^2.0.0",
+    "bcryptjs": "^2.4.3",
     "core-js": "^3.6.4",
+    "crypto-js": "^4.0.0",
+    "d3": "^5.15.1",
+    "d3-array": "^2.4.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
     "mysql": "^2.18.1",
     "register-service-worker": "^1.7.1",
+    "tailwindcss-transitions": "^2.2.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",
@@ -41,8 +55,10 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.2.0",
     "typescript": "~3.8.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuex-module-decorators": "^0.16.1"
   },
   "eslintConfig": {
     "root": true,
