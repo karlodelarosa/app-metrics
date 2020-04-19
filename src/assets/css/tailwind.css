@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+[v-cloak] { display:none; }
+
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .3s;
+    transition: opacity .2s;
 }
 .fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.scale-enter-active {
+    transition: all .2s;
+}
+.scale-enter, .scale-leave-to {
+    transform: scale(0.9);
     opacity: 0;
 }
 
@@ -44,24 +54,61 @@ button:disabled {
 /*Progress*/
 .demo {
     flex-direction: column;
-
-
 }
 
-.progress {
-    transform: rotate(-90deg);
+
+.column-wrapper{
+    height: 400px;
+    width: 100%;
+    transform: rotate(180deg);
+    /*margin: 0 auto;*/
+    overflow: hidden;
 }
 
-.progress__meter,
-.progress__value {
-    fill: none;
+.column{
+    position: relative;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transfrom: -moz-translateY(-10px);
 }
 
-.progress__meter {
-    stroke: #e6e6e6;
+.column-wave {
+    width: 200%;
+    height: 300px;
+    border-radius: 33%;
+    position: absolute;
+    left:-50%;
+    animation: customspin 3s ease-out;
 }
 
-.progress__value {
-    stroke: #f77a52;
-    stroke-linecap: round;
+@keyframes customspin {
+    0% {
+        transform: rotate(0deg);
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: -10px;
+    }
+    100% {
+        transform: rotate(360deg);
+        margin-top: 0px;
+    }
+}
+
+#supBreakdown tbody tr:active {
+    transform: scale(0.99);
+}
+
+.w-inherit {
+    width: inherit;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+button:focus + .button-icon-blue {
+    color: #4299e1!important;
 }

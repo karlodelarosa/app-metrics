@@ -46,13 +46,13 @@
           </div>
           <div class="sm:block sm:ml-6">
             <div class="flex">
-              <a
+              <router-link
+                to="/dashboard"
                 href="#"
-                @click="goToComponent('dashboard')"
-                :class="{ 'bg-gray-900': isDashboard }"
+                :class="{ 'bg-gray-900': dashboardIsActive }"
                 class="px-3 py-2 rounded-md text-sm font-medium leading-5 hover:bg-gray-700 text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
-                >Dashboard</a
-              >
+                >Dashboard
+              </router-link>
               <a
                 href="#"
                 class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
@@ -71,10 +71,17 @@
             </div>
           </div>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button class="p-1 border-2 menu-icon border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-            <i class="fa fa-user-cog"></i>
-          </button>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <router-link
+            to="/system-setting"
+            :class="{ 'bg-gray-900': settingsIsActive }"
+            class="p-1 border-2 border-transparent text-gray-400 rounded-full h-10 w-10 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+          >
+            <i class="fa fa-user-cog font-sm h-8 w-8"></i>
+          </router-link>
+
           <Notification />
           <AccountOptions />
         </div>
@@ -89,11 +96,24 @@ import Template from "@/store/Template";
 
 @Component
 export default class Header extends Vue {
-  get isDashboard() {
-    return Template.isDashboard;
+  get dashboardIsActive() {
+    return this.currentPage.includes("dashboard");
   }
 
-  goToComponent(payload: string) {
+  get settingsIsActive() {
+    return this.currentPage.includes("system-setting");
+  }
+  //
+  get currentPage() {
+    return this.$route.path;
+  }
+
+  // goToComponent(payload: string) {
+  //   Template.pageContentRequest(payload);
+  // }
+
+  goToPage(payload: string) {
+    this.$router.push(payload);
     Template.pageContentRequest(payload);
   }
 }

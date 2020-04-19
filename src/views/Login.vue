@@ -116,7 +116,7 @@ export default class Login extends Vue {
         this.clearErrors();
         this.$data.loginSuccess = true;
         setTimeout(() => {
-          this.$router.push('/home');
+          this.$router.push("/dashboard");
         }, 1500)
       } else {
         this.$data.errors.push(

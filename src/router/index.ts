@@ -11,10 +11,16 @@ const routes: Array<RouteConfig> = [
     component: Login
   },
   {
-    path: "/home",
-    name: "Home",
+    path: "/dashboard",
+    name: "Dashboard",
     component: () =>
-      import("../views/Template.vue")
+      import("../views/Dashboard.vue")
+  },
+  {
+    path: "/system-setting",
+    name: "Settings",
+    component: () =>
+      import("../views/SystemSetting.vue")
   }
 ];
 

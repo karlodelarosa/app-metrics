@@ -1,11 +1,10 @@
 <template>
+<!-- Remove this if not used -->
   <div class="bg-gray-200 relative">
-    <div class="flex pt-16" v-show="isDashboard">
+    <div class="flex pt-16" v-if="isActiveDashboardPages">
       <Sidebar />
       <Targets />
     </div>
-
-<!--    <MyAccount v-show="isMyAccount" />-->
   </div>
 </template>
 
@@ -15,8 +14,8 @@ import Template from "@/store/Template";
 
 @Component
 export default class MainContent extends Vue {
-  get isDashboard() { return Template.isDashboard }
-  get isMyAccount() { return Template.getActivePage === "myAccount"; }
-
+  get isActiveDashboardPages() {
+    return Template.isActiveDashboardPages;
+  }
 }
 </script>
