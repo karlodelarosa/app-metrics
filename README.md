@@ -1,5 +1,8 @@
 # app-metrics
 
+## Jira Board
+https://karlo-personal.atlassian.net/jira/software/projects/AM/boards/1
+
 ## Project setup
 ```
 npm install
