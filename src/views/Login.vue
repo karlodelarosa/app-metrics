@@ -2,19 +2,27 @@
   <div class="flex items-center justify-center h-screen bg-gray-200">
     <div class="w-full max-w-xs">
       <transition name="fade">
-        <div v-show="successfulLogin"
-        class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-5"
-        role="alert">
+        <div
+          v-show="successfulLogin"
+          class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-5"
+          role="alert"
+        >
           <i class="fas fa-spinner fa-pulse"></i>
           <p class="font-bold">{{ getApiMessage }}</p>
           <p class="text-xs">Please wait for a while</p>
         </div>
       </transition>
       <transition name="fade">
-        <div v-show="hasUsernameError || hasPasswordError || hasErrors"
-        :class="hasUsernameError || hasPasswordError || hasErrors ? 'error-again' : ''"
-        class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
-        role="alert">
+        <div
+          v-show="hasUsernameError || hasPasswordError || hasErrors"
+          :class="
+            hasUsernameError || hasPasswordError || hasErrors
+              ? 'error-again'
+              : ''
+          "
+          class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
+          role="alert"
+        >
           <p class="font-bold">Holy smokes!</p>
           <p class="text-xs">{{ this.$data.errors[0] }}</p>
           <p class="text-xs">{{ this.$data.usernameUIErrors[0] }}</p>
@@ -31,7 +39,9 @@
           </label>
           <input
             ref="username"
-            :class="hasUsernameError || hasErrors ? 'border border-red-500' : ''"
+            :class="
+              hasUsernameError || hasErrors ? 'border border-red-500' : ''
+            "
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
             type="text"
@@ -49,7 +59,9 @@
           </label>
           <input
             ref="password"
-            :class="hasPasswordError || hasErrors ? 'border border-red-500' : ''"
+            :class="
+              hasPasswordError || hasErrors ? 'border border-red-500' : ''
+            "
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
@@ -65,7 +77,7 @@
             type="button"
             :disabled="successfulLogin"
           >
-          Sign In
+            Sign In
           </button>
           <a
             class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
@@ -89,11 +101,21 @@ import { LoginService } from "@/Application/LoginService";
 
 @Component
 export default class Login extends Vue {
-  get hasErrors () { return this.$data.errors.length >= 1; }
-  get hasUsernameError() { return this.$data.usernameUIErrors.length >= 1; }
-  get hasPasswordError() { return this.$data.passwordUIErrors.length >= 1; }
-  get successfulLogin() { return this.$data.loginSuccess; }
-  get getApiMessage() { return this.$data.apiMessage; }
+  get hasErrors() {
+    return this.$data.errors.length >= 1;
+  }
+  get hasUsernameError() {
+    return this.$data.usernameUIErrors.length >= 1;
+  }
+  get hasPasswordError() {
+    return this.$data.passwordUIErrors.length >= 1;
+  }
+  get successfulLogin() {
+    return this.$data.loginSuccess;
+  }
+  get getApiMessage() {
+    return this.$data.apiMessage;
+  }
 
   $refs!: {
     username: HTMLInputElement;
@@ -117,11 +139,9 @@ export default class Login extends Vue {
         this.$data.loginSuccess = true;
         setTimeout(() => {
           this.$router.push("/dashboard");
-        }, 1500)
+        }, 1500);
       } else {
-        this.$data.errors.push(
-          authenticationResponse.message
-        );
+        this.$data.errors.push(authenticationResponse.message);
       }
     }
   }
@@ -132,7 +152,7 @@ export default class Login extends Vue {
     this.$data.passwordUIErrors = [];
   }
 
-  checkUsername(username:string) {
+  checkUsername(username: string) {
     this.$data.usernameUIErrors = [];
     if (username === "") {
       this.$data.usernameUIErrors.push(
@@ -143,7 +163,7 @@ export default class Login extends Vue {
     return true;
   }
 
-  checkPassword(password:string) {
+  checkPassword(password: string) {
     this.$data.passwordUIErrors = [];
     if (password === "") {
       this.$data.passwordUIErrors.push(

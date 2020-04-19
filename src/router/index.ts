@@ -13,14 +13,12 @@ const routes: Array<RouteConfig> = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: () =>
-      import("../views/Dashboard.vue")
+    component: () => import("../views/Dashboard.vue")
   },
   {
     path: "/system-setting",
     name: "Settings",
-    component: () =>
-      import("../views/SystemSetting.vue")
+    component: () => import("../views/SystemSetting.vue")
   }
 ];
 

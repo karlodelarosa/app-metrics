@@ -1,1 +1,1 @@
-declare module "vue-radial-progress"
+declare module "vue-radial-progress";

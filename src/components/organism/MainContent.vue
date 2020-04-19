@@ -1,5 +1,5 @@
 <template>
-<!-- Remove this if not used -->
+  <!-- Remove this if not used -->
   <div class="bg-gray-200 relative">
     <div class="flex pt-16" v-if="isActiveDashboardPages">
       <Sidebar />

@@ -1,7 +1,13 @@
 <template>
-  <div class="bg-white fixed mt-16 h-full max-h-screen min-h-screen shadow-md w-inherit">
+  <div
+    class="bg-white fixed mt-16 h-full max-h-screen min-h-screen shadow-md w-inherit"
+  >
     <div class="xl:py-2">
-      <div class="hidden xl:block uppercase font-bold text-grey-darker text-xs px-4 py-2">MENU</div>
+      <div
+        class="hidden xl:block uppercase font-bold text-grey-darker text-xs px-4 py-2"
+      >
+        MENU
+      </div>
       <div class="group sidebar-item with-children">
         <a
           @click="goToComponent('dashboard')"

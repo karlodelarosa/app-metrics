@@ -326,7 +326,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Vue } from "vue-property-decorator";
 import Template from "@/store/Template";
 
 export default class SupAdminPanel extends Vue {

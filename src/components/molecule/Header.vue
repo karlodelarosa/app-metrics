@@ -77,12 +77,19 @@
           <router-link
             to="/system-setting"
             :class="{ 'bg-gray-900': settingsIsActive }"
-            class="p-1 border-2 border-transparent text-gray-400 rounded-full h-10 w-10 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+            class="mx-1 border-2 border-transparent text-gray-400 rounded-full h-8 w-8 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
-            <i class="fa fa-user-cog font-sm h-8 w-8"></i>
+            <i class="fa fa-user-cog"></i>
           </router-link>
 
-          <Notification />
+          <router-link
+            to="/system-setting"
+            :class="{ 'bg-gray-900': settingsIsActive }"
+            class="border-2 border-transparent text-gray-400 rounded-full h-8 w-8 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+          >
+            <i class="fa fa-bell"></i>
+          </router-link>
+
           <AccountOptions />
         </div>
       </div>

@@ -21,7 +21,5 @@ export class AuthenticateIdentity {
   async getPayload() {
     const credentials = new Authenticate();
     return credentials.getLoginCredential(this.credentials);
-
-
   }
 }

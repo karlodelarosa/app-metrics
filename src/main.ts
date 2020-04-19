@@ -3,7 +3,7 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import '@/assets/css/tailwind.css';
+import "@/assets/css/tailwind.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import upperFirst from "lodash/upperFirst";
@@ -14,20 +14,13 @@ Vue.config.productionTip = false;
 /**
  * Vue Component Global Registration
  */
-const requireComponent = require.context(
-  './components/',
-  true,
-  /\.vue$/
-);
+const requireComponent = require.context("./components/", true, /\.vue$/);
 requireComponent.keys().forEach(relativeFilePath => {
-  const componentConfig = requireComponent(relativeFilePath)
-  const fileName = relativeFilePath.split('/').pop()
+  const componentConfig = requireComponent(relativeFilePath);
+  const fileName = relativeFilePath.split("/").pop();
   if (fileName) {
-    const componentName = upperFirst(camelCase(fileName.replace(/\.\w+$/, '')))
-    Vue.component(
-      componentName,
-      componentConfig.default || componentConfig
-    )
+    const componentName = upperFirst(camelCase(fileName.replace(/\.\w+$/, "")));
+    Vue.component(componentName, componentConfig.default || componentConfig);
   }
 });
 
