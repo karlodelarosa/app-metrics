@@ -103,7 +103,7 @@
               class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
             >
               <div
-                class="align-middle inline-block min-w-full  overflow-hidden"
+                class="align-middle inline-block min-w-full overflow-hidden"
               >
                 <table id="supBreakdown" class="min-w-full">
                   <thead class="bg-gray-200">

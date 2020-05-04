@@ -115,10 +115,6 @@ export default class Header extends Vue {
     return this.$route.path;
   }
 
-  // goToComponent(payload: string) {
-  //   Template.pageContentRequest(payload);
-  // }
-
   goToPage(payload: string) {
     this.$router.push(payload);
     Template.pageContentRequest(payload);

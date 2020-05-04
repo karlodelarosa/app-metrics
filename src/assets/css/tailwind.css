@@ -5,7 +5,7 @@
 [v-cloak] { display:none; }
 
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .2s;
+    transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to {
     opacity: 0;
@@ -17,6 +17,26 @@
 .scale-enter, .scale-leave-to {
     transform: scale(0.9);
     opacity: 0;
+}
+
+.slide-enter-active {
+  transition: .7s;
+}
+.slide-enter {
+    transform: translate(100%, 0);
+}
+.slide-leave-to {
+    transform: translate(-100%, 0);
+}
+
+.firstslide-enter-active {
+    transition: .7s;
+}
+.firstslide-enter {
+    transform: translate(-100%, 0);
+}
+.firstslide-leave-to {
+    transform: translate(100%, 0);
 }
 
 .error-again {
@@ -111,4 +131,38 @@ button:disabled {
 
 button:focus + .button-icon-blue {
     color: #4299e1!important;
+}
+
+.opacity-85 {
+    opacity: .85;
+}
+
+.black-opacity-50 {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.locked {
+    background-color: #ccc;
+}
+
+.steps .active {
+    transition: .3s;
+    margin-top: -10px;
+}
+
+.steps .active .icon-step {
+    background-color: #4fd1c5;
+    color: white;
+}
+
+.account-container:active {
+    transform: scale(0.99);
+}
+
+.z-modal {
+    z-index: 100;
+}
+
+.z-modal-backdrop {
+    z-index: 99;
 }

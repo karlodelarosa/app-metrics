@@ -11,14 +11,17 @@ import store from "@/store";
 export interface TemplateInterface {
   activeRoute: string;
   pageContent: string;
+  systemSettingActiveComponent: any;
+  isOpenConfirmModal: boolean;
 }
 
 @Module({ dynamic: true, store, name: "Template", namespaced: true })
 export class Template extends VuexModule implements TemplateInterface {
   activeRoute = "";
   pageContent = "";
+  systemSettingActiveComponent = null;
+  isOpenConfirmModal = false;
 
-  // get getColorTheme () { return this.themeColorMode; }
   get isActiveDashboardPages() {
     return this.isActiveSupComponent;
   }
@@ -38,8 +41,13 @@ export class Template extends VuexModule implements TemplateInterface {
     return this.pageContent === Constants.BASE_CONSTANTS.SUP_ADMIN_PANEL;
   }
 
-  get getActiveRoute() {
-    return this.activeRoute;
+  get getSystemSettingActiveComponent() {
+    return localStorage.getItem("system-setting-active-component");
+  }
+
+  get isOpenConfirmationModal() {
+    console.info(this.isOpenConfirmModal);
+    return this.isOpenConfirmModal;
   }
 
   @Action({ rawError: true })
@@ -47,11 +55,6 @@ export class Template extends VuexModule implements TemplateInterface {
     this.SET_PAGE_CONTENT(requestedContent);
     localStorage.setItem("activePage", requestedContent);
   }
-
-  // @Mutation
-  // public SET_THEME_COLOR_MODE (payload:string) {
-  //     this.themeColorMode = payload;
-  // }
 
   @Mutation
   public SET_PAGE_CONTENT(payload: string) {
@@ -61,6 +64,11 @@ export class Template extends VuexModule implements TemplateInterface {
   @Mutation
   public SET_ACTIVE_ROUTE(payload: string) {
     this.activeRoute = payload;
+  }
+
+  @Mutation
+  public SET_CONFIRMATION_MODAL(payload:boolean) {
+    this.isOpenConfirmModal = payload;
   }
 }
 
