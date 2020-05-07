@@ -13,6 +13,7 @@ export interface TemplateInterface {
   pageContent: string;
   systemSettingActiveComponent: any;
   isOpenConfirmModal: boolean;
+  isOnSystemSettingBackgroundImage: boolean;
 }
 
 @Module({ dynamic: true, store, name: "Template", namespaced: true })
@@ -21,6 +22,7 @@ export class Template extends VuexModule implements TemplateInterface {
   pageContent = "";
   systemSettingActiveComponent = null;
   isOpenConfirmModal = false;
+  isOnSystemSettingBackgroundImage = true;
 
   get isActiveDashboardPages() {
     return this.isActiveSupComponent;
@@ -31,18 +33,23 @@ export class Template extends VuexModule implements TemplateInterface {
       this.pageContent === Constants.BASE_CONSTANTS.SUP_ADMIN_PANEL
     );
   }
-  get getActivePage() {
-    return this.pageContent;
-  }
+
   get supDashboard() {
     return this.pageContent === Constants.BASE_CONSTANTS.SUP_DASHBOARD;
   }
+
   get supAdminPage() {
     return this.pageContent === Constants.BASE_CONSTANTS.SUP_ADMIN_PANEL;
   }
 
-  get getSystemSettingActiveComponent() {
-    return localStorage.getItem("system-setting-active-component");
+  get isOn() {
+    return {
+      'system-setting-background': this.isOnSystemSettingBackgroundImage
+    };
+  }
+
+  get isOnSystemSettingBackground() {
+    return this.isOnSystemSettingBackgroundImage;
   }
 
   get isOpenConfirmationModal() {
@@ -69,6 +76,11 @@ export class Template extends VuexModule implements TemplateInterface {
   @Mutation
   public SET_CONFIRMATION_MODAL(payload:boolean) {
     this.isOpenConfirmModal = payload;
+  }
+
+  @Mutation
+  public SET_SYSTEM_SETTING_BACKGROUND_IMAGE_STATUS () {
+    this.isOnSystemSettingBackgroundImage = !this.isOnSystemSettingBackgroundImage;
   }
 }
 

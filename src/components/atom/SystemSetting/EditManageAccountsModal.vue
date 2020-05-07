@@ -4,17 +4,47 @@
       v-show="isOpenConfirmationModal"
       class="fixed bottom-0 inset-x-0 px-4 sm:inset-0 sm:flex sm:items-center sm:justify-center z-50"
     >
-            <div class="fixed inset-0 transition-opacity">
-              <div class="absolute inset-0 bg-black opacity-25"></div>
-            </div>
+      <div class="fixed inset-0 transition-opacity">
+        <div class="absolute inset-0 bg-black opacity-25"></div>
+      </div>
       <div
         class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full"
       >
-        <p class="text-center mt-6 font-black mb-12 text-xl">
-          Edit Account Information
+        <p class="text-center my-6 font-black text-xl">
+          Account Information
         </p>
+
         <div class="px-8 flex flex-col mb-8">
+          <hr class="mb-2" />
           <div class="flex flex-col my-2">
+            <div
+              class="flex flex-col p-3 border border-gray-300 mb-6 rounded bg-gray-200"
+            >
+              <label class="text-sm font-black"
+                >Username:
+                <span class="text-blue-600 underline font-bold font-mono"
+                  >karlo@gmail.com</span
+                ></label
+              >
+              <label class="text-sm font-black"
+                >Password:
+                <span class="text-gray-600font-bold font-mono"
+                  >********</span
+                ></label
+              >
+              <button
+                class="bg-black hover:opacity-75 text-white rounded-lg border border-gray-300 mt-2 py-2 font-sm transition duration-150"
+              >
+                <div>
+                  <font-awesome-icon :icon="['far', 'paper-plane']" /> Send
+                  password to this email
+                </div>
+                <div hidden>
+                  <font-awesome-icon :icon="['fas', 'spinner']" spin /> Sending
+                  ...
+                </div>
+              </button>
+            </div>
             <div
               class="flex flex-row justify-between h-12 bg-gray-200 px-2 items-center justify-center"
             >
@@ -58,7 +88,7 @@
             </select>
           </div>
         </div>
-        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+        <div class="bg-gray-200 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
           <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
             <button
               type="button"

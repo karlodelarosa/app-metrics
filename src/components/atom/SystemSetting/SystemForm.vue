@@ -56,17 +56,17 @@
         <button
           class="text-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white text-center bg-gray-400 px-4 py-2 m-2 hover:bg-gray-600 hover:text-white transition duration-100"
         >
-          <i class="fa fa-lock"></i>
+          <font-awesome-icon :icon="['fas', 'lock']" class="icon alt"/>
         </button>
         <p class="font-bold text-gray-600 uppercase text-xs">
-          <i class="fa fa-arrow-left"></i> Enable editing
+          <font-awesome-icon :icon="['fas', 'arrow-left']" class="icon alt"/> Enable editing
         </p>
       </div>
       <div class="w-1/2 flex items-center justify-end px-3">
         <button
           class="text-xs bg-green-500 rounded hover:bg-green-600 text-white font-black px-4 py-2 transition duration-200 ease-in"
         >
-          <i class="fa fa-save"></i> SAVE
+          <font-awesome-icon :icon="['fas', 'save']" class="icon alt"/> SAVE
         </button>
       </div>
     </div>

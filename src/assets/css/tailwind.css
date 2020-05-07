@@ -166,3 +166,23 @@ button:focus + .button-icon-blue {
 .z-modal-backdrop {
     z-index: 99;
 }
+
+button:focus,
+input:focus {
+    outline:none;
+}
+
+.system-setting-background-img {
+    background-image: url('https://i.redd.it/yn9ryipxeac31.png');
+}
+
+.item-press:active {
+    transform: scale(0.99);
+}
+
+.shrink-enter-active, .shrink-leave-active {
+    transition: .3s;
+}
+.shrink-enter, .shrink-leave-to {
+    transform: scaleY(0);
+}

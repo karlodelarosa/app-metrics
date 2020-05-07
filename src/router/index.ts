@@ -19,7 +19,17 @@ const routes: Array<RouteConfig> = [
     path: "/system-setting",
     name: "Settings",
     component: () => import("../views/SystemSetting.vue")
-  }
+  },
+  {
+    path: "/account-profile",
+    name: "AccountProfile",
+    component: () => import("../views/AccountProfile.vue")
+  },
+  {
+    path: "/teams",
+    name: "Team",
+    component: () => import("../views/Teams.vue")
+  },
 ];
 
 const router = new VueRouter({

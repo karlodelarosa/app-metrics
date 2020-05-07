@@ -6,9 +6,7 @@
       >
         <div class="flex justify-end">
           <button @click="closeAddAccountModal()" class="focus:outline-none px-1">
-            <i
-              class="fa fa-times-circle cursor-pointer text-red-500 hover:text-red-400"
-            ></i>
+            <font-awesome-icon :icon="['fas', 'times-circle']" class="cursor-pointer text-red-500 hover:text-red-400"/>
           </button>
         </div>
         <UserAccounts />

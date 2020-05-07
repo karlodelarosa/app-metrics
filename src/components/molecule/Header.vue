@@ -53,11 +53,11 @@
                 class="px-3 py-2 rounded-md text-sm font-medium leading-5 hover:bg-gray-700 text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
                 >Dashboard
               </router-link>
-              <a
-                href="#"
+              <router-link
+                to="/teams"
                 class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
-                >Team</a
-              >
+                >Team
+              </router-link>
               <a
                 href="#"
                 class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
@@ -79,15 +79,14 @@
             :class="{ 'bg-gray-900': settingsIsActive }"
             class="mx-1 border-2 border-transparent text-gray-400 rounded-full h-8 w-8 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
-            <i class="fa fa-user-cog"></i>
+            <font-awesome-icon :icon="['fas', 'user-cog']" />
           </router-link>
 
           <router-link
             to="/system-setting"
-            :class="{ 'bg-gray-900': settingsIsActive }"
             class="border-2 border-transparent text-gray-400 rounded-full h-8 w-8 flex items-center justify-center hover:text-white focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
           >
-            <i class="fa fa-bell"></i>
+            <font-awesome-icon :icon="['fas', 'bell']" />
           </router-link>
 
           <AccountOptions />

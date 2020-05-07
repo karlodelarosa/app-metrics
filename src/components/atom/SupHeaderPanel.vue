@@ -12,13 +12,13 @@
         <div
           class="mt-2 flex items-center text-sm leading-5 text-gray-600 sm:mr-6"
         >
-          <i class="fa fa-clock mr-1 text-gray-300"></i>
+          <font-awesome-icon :icon="['fas', 'clock']" class="mr-1 text-gray-400"/>
           Updated 3 hours ago
         </div>
         <div
           class="mt-2 flex items-center text-sm leading-5 text-gray-600 sm:mr-6"
         >
-          <i class="fa fa-user mr-1 text-gray-300"></i>
+          <font-awesome-icon :icon="['fas', 'user']" class="mr-1 text-gray-400"/>
           Karlo
         </div>
       </div>
@@ -30,7 +30,7 @@
           type="button"
           class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 transition duration-150 ease-in-out"
         >
-          <i class="fa fa-user-secret mr-1 text-gray-500"></i>
+          <font-awesome-icon :icon="['fas', 'user-secret']" class="mr-1 text-gray-500"/>
           Admin Panel
         </button>
       </span>
@@ -39,7 +39,7 @@
           type="button"
           class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
         >
-          <i class="fa fa-chart-line mr-1 text-gray-500"></i>
+          <font-awesome-icon :icon="['fas', 'chart-line']" class="mr-1 text-gray-500"/>
           Timeline
         </button>
       </span>
@@ -49,7 +49,7 @@
           type="button"
           class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700 transition duration-150 ease-in-out"
         >
-          <i class="fa fa-sync mr-1"></i>
+          <font-awesome-icon :icon="['fas', 'sync']" class="mr-1"/>
           Refresh
         </button>
       </span>

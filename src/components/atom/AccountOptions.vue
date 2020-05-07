@@ -17,23 +17,27 @@
         <div
           class="py-2 rounded-md bg-white shadow-xs absolute right-0 mt-1 w-48 shadow-md"
         >
-          <a
-            href="#"
+          <router-link
+            to="/account-profile"
             @click="goToComponent('myAccount')"
             class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
           >
-            <i class="fa fa-user-circle"></i>
+            <font-awesome-icon :icon="['fas', 'user-circle']" />
             Your Profile
-          </a>
+          </router-link>
           <a
             href="#"
             class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >Settings</a
           >
+            <font-awesome-icon :icon="['fas', 'cogs']" />
+            Settings</a
+          >
+          <hr />
           <a
             href="#"
             class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >Sign out</a
+          >
+            Sign out</a
           >
         </div>
       </div>

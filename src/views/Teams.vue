@@ -5,13 +5,7 @@
     <Header />
 
     <div class="flex flex-col relative bg-white container mx-auto mt-20">
-      <div class="h-64 bg-red-300">
-        Image
-      </div>
-      <div
-        class="absolute rounded-full w-56 h-56 bg-transparent border-4 border-gray-500"
-      ></div>
-      <div class="h-64 bg-red-500"></div>
+      teams
     </div>
   </div>
 </template>

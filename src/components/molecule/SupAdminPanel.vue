@@ -7,7 +7,7 @@
           type="button"
           class="px-4 py-2 mr-3 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 transition duration-150 ease-in-out"
         >
-          <i class="fa fa-arrow-left text-gray-500 mr-1"></i>
+          <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-gray-500"/>
           Back
         </button>
 
@@ -92,7 +92,7 @@
               <button
                 class="bg-blue-700 px-4 py-2 items-center justify-center text-sm leading-5 absolute right-0 font-medium rounded-md text-white hover:bg-blue-600 transition duration-150 ease-in-out"
               >
-                <i class="fa fa-plus"></i>
+                <font-awesome-icon :icon="['fas', 'plus']" />
                 Add Downtime
               </button>
             </div>
