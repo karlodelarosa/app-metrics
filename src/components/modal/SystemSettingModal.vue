@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <EditManageAccountsModal/>
-    </div>
+  <div>
+    <EditManageAccountsModal />
+  </div>
 </template>

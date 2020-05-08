@@ -1,6 +1,9 @@
 <template>
   <transition :name="transitionName">
-    <form class="w-full px-12 pt-4 mt-6 p-5 min-w-full" style="min-height: 400px">
+    <form
+      class="w-full px-12 pt-4 mt-6 p-5 min-w-full"
+      style="min-height: 400px"
+    >
       <div class="flex justify-center items-center bg-indigo-500 h-6 mb-5">
         <p class="text-white font-black text-xs uppercase">Account info</p>
       </div>

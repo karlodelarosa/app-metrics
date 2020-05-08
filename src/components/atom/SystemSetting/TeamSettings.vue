@@ -25,11 +25,15 @@
             >
               <div class="flex flex-row justify-between">
                 <label class="flex items-center justify-center">Karlo</label>
-                <div v-show="memberSelected === x" >
+                <div v-show="memberSelected === x">
                   <button
                     class="h-6 px-1 text-xs shadow rounded text-red-500 bg-white flex items-center justify-center hover:bg-red-500 hover:text-white"
                   >
-                    <font-awesome-icon :icon="['fas', 'trash']" size="xs" class="mr-1" />
+                    <font-awesome-icon
+                      :icon="['fas', 'trash']"
+                      size="xs"
+                      class="mr-1"
+                    />
                     Remove
                   </button>
                 </div>

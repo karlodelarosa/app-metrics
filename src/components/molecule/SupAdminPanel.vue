@@ -7,7 +7,10 @@
           type="button"
           class="px-4 py-2 mr-3 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-200 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:text-gray-800 transition duration-150 ease-in-out"
         >
-          <font-awesome-icon :icon="['fas', 'arrow-left']" class="text-gray-500"/>
+          <font-awesome-icon
+            :icon="['fas', 'arrow-left']"
+            class="text-gray-500"
+          />
           Back
         </button>
 
@@ -102,9 +105,7 @@
             <div
               class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
             >
-              <div
-                class="align-middle inline-block min-w-full overflow-hidden"
-              >
+              <div class="align-middle inline-block min-w-full overflow-hidden">
                 <table id="supBreakdown" class="min-w-full">
                   <thead class="bg-gray-200">
                     <tr>

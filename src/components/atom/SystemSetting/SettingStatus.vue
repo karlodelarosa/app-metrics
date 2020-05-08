@@ -22,7 +22,7 @@
 
       <div>
         <button @click="toggleBackground()" class="text-white hover:opacity-75">
-          <font-awesome-icon :icon="['fas', 'image']" class="icon alt"/>
+          <font-awesome-icon :icon="['fas', 'image']" class="icon alt" />
         </button>
       </div>
     </div>

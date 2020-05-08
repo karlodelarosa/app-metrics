@@ -1,25 +1,20 @@
 export interface ResponseFormatterInterface {
-  apiResponse: {
-    data: {
-      sucess: boolean;
-      message: string;
-    };
-    status: number;
-  };
+  // apiResponse: {
+  //   data: {
+  //     sucess: boolean;
+  //     message: string;
+  //   };
+  //   status: number;
+  // };
+  apiResponse: object;
 }
 
 export class Response {
-  apiResponse = {
-    data: {
-      sucess: false,
-      message: ""
-    },
-    status: 0
-  };
+  apiResponse = {};
 
   static API_SUCCESS_CODE = 200;
 
-  public constructor(response: any) {
+  public constructor(response: object) {
     this.apiResponse = response;
   }
 

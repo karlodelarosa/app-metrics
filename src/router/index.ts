@@ -29,7 +29,7 @@ const routes: Array<RouteConfig> = [
     path: "/teams",
     name: "Team",
     component: () => import("../views/Teams.vue")
-  },
+  }
 ];
 
 const router = new VueRouter({

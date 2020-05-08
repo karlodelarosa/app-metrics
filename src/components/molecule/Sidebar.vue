@@ -14,7 +14,7 @@
           class="block xl:flex xl:items-center text-center xl:text-left shadow-light xl:shadow-none py-6 xl:py-2 xl:px-4 border-l-4 border-transparent hover:bg-gray-200 cursor-pointer"
           :class="{ 'bg-gray-200': isActiveSupComponent }"
         >
-          <font-awesome-icon :icon="['fas', 'crosshairs']"/>
+          <font-awesome-icon :icon="['fas', 'crosshairs']" />
           <div class="text-xs pl-3">
             SUP Dashboard
           </div>

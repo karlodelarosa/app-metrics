@@ -1,9 +1,9 @@
-import lodash from "lodash"
+import lodash from "lodash";
 
 class StringUtilities {
-    public capitalizeFirstLetter(words:any) {
-        return lodash.upperFirst(words);
-    }
+  public capitalizeFirstLetter(words: string) {
+    return lodash.upperFirst(words);
+  }
 }
 
 export const Strings = new StringUtilities();

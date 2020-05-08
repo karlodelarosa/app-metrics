@@ -11,7 +11,6 @@ import store from "@/store";
 export interface TemplateInterface {
   activeRoute: string;
   pageContent: string;
-  systemSettingActiveComponent: any;
   isOpenConfirmModal: boolean;
   isOnSystemSettingBackgroundImage: boolean;
 }
@@ -20,7 +19,6 @@ export interface TemplateInterface {
 export class Template extends VuexModule implements TemplateInterface {
   activeRoute = "";
   pageContent = "";
-  systemSettingActiveComponent = null;
   isOpenConfirmModal = false;
   isOnSystemSettingBackgroundImage = true;
 
@@ -44,7 +42,7 @@ export class Template extends VuexModule implements TemplateInterface {
 
   get isOn() {
     return {
-      'system-setting-background': this.isOnSystemSettingBackgroundImage
+      "system-setting-background": this.isOnSystemSettingBackgroundImage
     };
   }
 
@@ -74,13 +72,14 @@ export class Template extends VuexModule implements TemplateInterface {
   }
 
   @Mutation
-  public SET_CONFIRMATION_MODAL(payload:boolean) {
+  public SET_CONFIRMATION_MODAL(payload: boolean) {
     this.isOpenConfirmModal = payload;
   }
 
   @Mutation
-  public SET_SYSTEM_SETTING_BACKGROUND_IMAGE_STATUS () {
-    this.isOnSystemSettingBackgroundImage = !this.isOnSystemSettingBackgroundImage;
+  public SET_SYSTEM_SETTING_BACKGROUND_IMAGE_STATUS() {
+    this.isOnSystemSettingBackgroundImage = !this
+      .isOnSystemSettingBackgroundImage;
   }
 }
 
