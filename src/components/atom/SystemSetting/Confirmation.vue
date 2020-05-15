@@ -32,3 +32,15 @@
     </div>
   </transition>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+import PersonalInformation from "@/store/Domain/Accounts/PersonalInformation";
+
+@Component
+export default class AccountConfirmation extends Vue {
+ get firstName() {
+   return PersonalInformation.getFirstName;
+ }
+}
+</script>

@@ -26,6 +26,9 @@ export class Accounts extends VuexModule implements AccountsInterface {
 
   @Action({ rawError: true })
   public nextStep() {
+    if (this.step === 2) {
+      this.CHANGE_TRANSITION_NAME("firstslide");
+    }
     this.INCREMENT_STEP();
   }
 

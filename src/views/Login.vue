@@ -7,7 +7,7 @@
           class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-5"
           role="alert"
         >
-          <i class="fas fa-spinner fa-pulse"></i>
+          <font-awesome-icon :icon="['fas', 'spinner']" pulse />
           <p class="font-bold">{{ getApiMessage }}</p>
           <p class="text-xs">Please wait for a while</p>
         </div>

@@ -3,7 +3,7 @@
     <div style="min-height: 500px">
       <div class="flex flex-col border-b border-gray-300 mb-8">
         <div class="text-center pb-4 ">
-          <font-awesome-icon :icon="['fas', 'user-plus']" />
+<!--          <font-awesome-icon :icon="['fas', 'user-plus']" />-->
           <p class="font-bold text-lg">Add Account</p>
         </div>
       </div>

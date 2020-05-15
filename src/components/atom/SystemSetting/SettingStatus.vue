@@ -2,7 +2,7 @@
   <div>
     <div
       :class="{ 'black-opacity-50': isOnSystemSettingBackground }"
-      class="flex flex-row justify-between w-full mt-5 rounded-lg p-5  blur"
+      class="flex flex-row justify-between w-full mt-5 rounded-lg p-5 blur"
     >
       <div class="flex flex-row">
         <div class="mr-4 flex flex-col">

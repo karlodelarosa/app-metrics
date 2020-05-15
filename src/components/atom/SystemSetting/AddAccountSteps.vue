@@ -72,6 +72,7 @@
         </div>
       </div>
     </div>
+    <hr class="mt-8">
   </div>
 </template>
 
