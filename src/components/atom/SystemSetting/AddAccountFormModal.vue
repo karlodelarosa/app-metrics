@@ -2,10 +2,9 @@
   <transition name="fade" mode="out-in">
     <div
       v-show="isVisibleAddAccountModal"
-      class="flex items-center justify-center"
     >
       <div
-        class="mt-8 bg-white overflow-hidden fixed mx-auto z-modal inset-x-0 w-2/3 rounded-lg"
+        class="bg-white overflow-hidden fixed top-0 mt-32 z-modal w-1/3 rounded-lg"
       >
         <div class="flex justify-end">
           <button

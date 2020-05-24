@@ -5,7 +5,7 @@
     <Header />
 
     <div class="flex flex-col relative bg-white container mx-auto mt-20">
-      teams
+      Put some drag and drop experience here!
     </div>
   </div>
 </template>

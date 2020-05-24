@@ -57,6 +57,44 @@
     }
 }
 
+.error-input-again {
+   animation: nudge-again .4s linear;
+}
+
+@keyframes nudge-again {
+    0% {
+        transform: translateX(-5px);
+    }
+
+    15% {
+        transform: translateX(5px);
+    }
+
+    30% {
+        transform: translateX(-5px);
+    }
+
+    45% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    90% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 input:disabled {
     background-color: #efefef;
 }
@@ -191,4 +229,33 @@ input:focus {
     color: #fff;
     background: rgb(204,43,94);
     background: linear-gradient(90deg, rgba(204,43,94,0.7) 0%, rgba(117,58,136,0.7) 100%);
+}
+
+.loading-frame {
+    width: 50px;
+    height: 110px;
+    background-color: orange;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 120px;
+    height: 120px;
+    margin-left: -30px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 34%;
+    animation: fill-up 3s infinite;
+}
+
+@keyframes fill-up {
+    from {
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        margin-top: -140px;
+    }
 }

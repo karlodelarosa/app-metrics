@@ -1,45 +1,45 @@
 <template>
   <div>
-    <div style="min-height: 500px">
-      <div class="flex flex-col border-b border-gray-300 mb-8">
+    <div style="min-height: 300px">
+      <div class="flex flex-col border-b border-gray-300">
         <div class="text-center pb-4 ">
-<!--          <font-awesome-icon :icon="['fas', 'user-plus']" />-->
           <p class="font-bold text-lg">Add Account</p>
         </div>
       </div>
 
       <div class="flex flex-col">
-        <AddAccountSteps />
         <div class="flex flex-row">
           <PersonalInfo v-show="step === 1" />
           <AccountInfo v-show="step === 2" />
           <Confirmation v-show="step === 3" />
         </div>
 
-        <div
-          class="flex bg-gray-200 px-3 absolute py-3 left-0 right-0 bottom-0 rounded-br-lg"
-        >
-          <div class="w-1/2 flex items-center justify-start">
-            <button
-              v-show="step !== 1"
-              @click="previous()"
-              class="text-xs mx-3 bg-gray-400 rounded hover:bg-gray-500 text-gray-600 hover:text-gray-700 font-black px-4 py-2 transition duration-100 ease-in"
-            >
-              <i class="fa fa-arrow-left"></i>
-              Back
-            </button>
+        <transition name="scale">
+          <div
+            v-show="step !== 1"
+            class="flex bg-gray-200 px-3 absolute py-3 left-0 right-0 bottom-0 rounded-br-lg"
+          >
+            <div class="w-1/2 flex items-center justify-start">
+              <button
+                @click="previous()"
+                class="text-xs mx-3 bg-gray-400 rounded hover:bg-gray-500 text-gray-600 hover:text-gray-700 font-black px-4 py-2 transition duration-100 ease-in"
+              >
+                <i class="fa fa-arrow-left"></i>
+                Back
+              </button>
+            </div>
+            <div class="w-1/2 flex items-center justify-end px-3">
+              <!--            <button-->
+              <!--              v-show="step !== 3"-->
+              <!--              @click="next()"-->
+              <!--              class="text-xs bg-blue-500 rounded hover:bg-green-600 text-white font-black px-4 py-2 transition duration-200 ease-in"-->
+              <!--            >-->
+              <!--              Next-->
+              <!--              <i class="fa fa-arrow-right"></i>-->
+              <!--            </button>-->
+            </div>
           </div>
-          <div class="w-1/2 flex items-center justify-end px-3">
-            <button
-              v-show="step !== 3"
-              @click="next()"
-              class="text-xs bg-blue-500 rounded hover:bg-green-600 text-white font-black px-4 py-2 transition duration-200 ease-in"
-            >
-              Next
-              <i class="fa fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+        </transition>
       </div>
     </div>
   </div>

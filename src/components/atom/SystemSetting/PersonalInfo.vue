@@ -2,9 +2,9 @@
   <transition name="firstslide">
     <div
       class="w-full px-12 pt-4 mt-6 p-5 min-w-full"
-      style="min-height: 400px"
+      style="min-height: 300px"
     >
-      <div class="flex justify-center items-center h-6 mt-6 mb-12 flex-col">
+      <div class="flex justify-center items-center h-6  mb-6 flex-col">
         <font-awesome-icon :icon="['fas', 'user-tie']" size="lg" />
         <p class="text-black font-black text-xs uppercase pt-3">
           Personal info
@@ -18,13 +18,15 @@
           {{ errors.message }}
         </div>
       </transition>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <div
+        class="flex flex-wrap flex-col justify-center items-center -mx-3 mb-6"
+      >
+        <div class="w-full md:w-full px-3 mb-6 md:mb-0">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-first-name"
           >
-            First Name
+            First Name <i class="text-red-500">*</i>
           </label>
           <input
             v-model="firstName"
@@ -38,7 +40,7 @@
             First name is required.
           </p>
         </div>
-        <div class="w-full md:w-1/3 px-3">
+        <div class="w-full md:w-full px-3 mt-6">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-last-name"
@@ -54,12 +56,12 @@
           />
         </div>
 
-        <div class="w-full md:w-1/3 px-3">
+        <div class="w-full md:w-full px-3 mt-6">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             for="grid-last-name"
           >
-            Last Name
+            Last Name <i class="text-red-500">*</i>
           </label>
           <input
             v-model="lastName"
@@ -73,76 +75,89 @@
             Last name is required.
           </p>
         </div>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          >
-            Birthdate
-          </label>
-          <div class="flex flex-row">
-            <div class="md:w-1/6 sm:w-1/3">
-              <select
-                v-model="birthDate.year"
-                :class="{ 'border-red-300': hasError.birthDate.year }"
-                class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              >
-                <option :value="null" disabled>Year</option>
-                <option v-for="i in years" :value="i" :key="i">{{ i }}</option>
-              </select>
-              <p
-                v-show="hasError.birthDate.year"
-                class="text-red-500 text-xs italic"
-              >
-                Year is required.
-              </p>
-            </div>
-            <div class="md:w-1/6 sm:w-1/3 mx-2">
-              <select
-                :disabled="birthDate.year === null"
-                @change="adjustDays()"
-                v-model="birthDate.month"
-                :class="{ 'border-red-300': hasError.birthDate.month, 'bg-gray-400 cursor-not-allowed': birthDate.year === null }"
-                class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              >
-                <option :value="null" disabled>Month</option>
-                <option
-                  v-for="(value, i) in monthList"
-                  :value="value"
-                  :key="i"
-                  >{{ i }}</option
-                >
-              </select>
-              <p
-                v-show="hasError.birthDate.month"
-                class="text-red-500 text-xs italic"
-              >
-                Month is required.
-              </p>
-            </div>
 
-            <div class="md:w-1/6 sm:w-1/3">
-              <select
-                :disabled="birthDate.month === null"
-                v-model="birthDate.day"
-                :class="{ 'border-red-300': hasError.birthDate.day, 'bg-gray-400 cursor-not-allowed': birthDate.month === null }"
-                class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              >
-                <option :value="null" disabled>Day</option>
-                <option v-for="i in days" :key="i">{{ i }}</option>
-              </select>
-              <p
-                v-show="hasError.birthDate.day"
-                class="text-red-500 text-xs italic"
-              >
-                Day is required
-              </p>
+        <div
+          class="flex flex-row justify-center items-center -mx-3 mb-6 w-full mt-6"
+        >
+          <div class="w-full px-3">
+            <label
+              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            >
+              Birthdate <i class="text-red-500">*</i>
+            </label>
+            <div class="flex flex-row">
+              <div class="md:w-full sm:w-1/3">
+                <select
+                  v-model="birthDate.year"
+                  @change="adjustDays()"
+                  :class="{ 'border-red-300': hasError.birthDate.year }"
+                  class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                >
+                  <option :value="null" disabled>Year</option>
+                  <option v-for="i in years" :value="i" :key="i">{{
+                    i
+                  }}</option>
+                </select>
+                <p
+                  v-show="hasError.birthDate.year"
+                  class="text-red-500 text-xs italic"
+                >
+                  Year is required.
+                </p>
+              </div>
+              <div class="md:w-full sm:w-1/3 mx-2">
+                <select
+                  :disabled="birthDate.year === null"
+                  @change="adjustDays()"
+                  v-model="birthDate.month"
+                  :class="{
+                    'border-red-300': hasError.birthDate.month,
+                    'bg-gray-400 cursor-not-allowed': birthDate.year === null
+                  }"
+                  class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                >
+                  <option :value="null" disabled>Month</option>
+                  <option
+                    v-for="(value, i) in monthList"
+                    :value="value"
+                    :key="i"
+                    >{{ i }}</option
+                  >
+                </select>
+                <p
+                  v-show="hasError.birthDate.month"
+                  class="text-red-500 text-xs italic"
+                >
+                  Month is required.
+                </p>
+              </div>
+
+              <div class="md:w-full sm:w-1/3">
+                <select
+                  :disabled="birthDate.month === null"
+                  v-model="birthDate.day"
+                  :class="{
+                    'border-red-300': hasError.birthDate.day,
+                    'bg-gray-400 cursor-not-allowed': birthDate.month === null
+                  }"
+                  class="block h-12 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                >
+                  <option :value="null" disabled>Day</option>
+                  <option v-for="i in days" :key="i">{{ i }}</option>
+                </select>
+                <p
+                  v-show="hasError.birthDate.day"
+                  class="text-red-500 text-xs italic"
+                >
+                  Day is required
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mb-16 mt-8 flex justify-end">
+
+      <div class="mb-3 mt-3 flex justify-end">
         <button
           @click="submitPersonalInfo()"
           class="text-xs bg-green-500 rounded hover:bg-green-600 text-white font-black px-4 py-2 transition duration-150 ease-in"
@@ -209,23 +224,23 @@ export default class PersonalInfo extends Vue {
 
   checkUIInputs() {
     this.resetError();
-    if (this.$data.firstName === null) {
+    if (this.$data.firstName === "") {
       this.$data.hasError.firstName = true;
     }
 
-    if (this.$data.lastName === null) {
+    if (this.$data.lastName === "") {
       this.$data.hasError.lastName = true;
     }
 
-    if (this.$data.birthDate.day === null) {
+    if (this.$data.birthDate.day === "") {
       this.$data.hasError.birthDate.day = true;
     }
 
-    if (this.$data.birthDate.month === null) {
+    if (this.$data.birthDate.month === "") {
       this.$data.hasError.birthDate.month = true;
     }
 
-    if (this.$data.birthDate.year === null) {
+    if (this.$data.birthDate.year === "") {
       this.$data.hasError.birthDate.year = true;
     }
   }
@@ -244,13 +259,13 @@ export default class PersonalInfo extends Vue {
 
   data() {
     return {
-      firstName: null,
-      middleName: null,
-      lastName: null,
+      firstName: "",
+      middleName: "",
+      lastName: "",
       birthDate: {
-        day: null,
-        month: null,
-        year: null
+        day: "",
+        month: "",
+        year: ""
       },
       hasError: {
         firstName: false,
