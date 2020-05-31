@@ -387,3 +387,18 @@ input:focus {
         margin-top: -140px;
     }
 }
+
+hr.divider {
+    margin: 20px;
+}
+
+.system-setting-disabled-form {
+    background: rgba(0,0,0,0.8);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.system-setting-disabled-form * {
+    opacity: 0.7;
+    color: #fff;
+}

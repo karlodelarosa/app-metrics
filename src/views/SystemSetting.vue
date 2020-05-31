@@ -7,7 +7,6 @@
     <Header />
     <SystemSettingModal />
     <div class="mt-16 p-2 w-5/6 mx-auto">
-      <SettingStatus />
       <div class="rounded-lg shadow-lg mt-6 mb-3 h-auto">
         <div class="flex mb-4">
           <div class="w-1/4">

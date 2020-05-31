@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold text-gray-800">Activity System</h1>
+    <UnderConstruction/>
   </div>
 </template>
 

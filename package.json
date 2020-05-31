@@ -19,6 +19,7 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/crypto-js": "^3.1.44",
     "@types/lodash": "^4.14.149",
+    "@types/vue2-datepicker": "^3.3.0",
     "axios": "^0.19.2",
     "bcrpyt": "^2.0.0",
     "bcryptjs": "^2.4.3",
@@ -34,6 +35,7 @@
     "vue-property-decorator": "^8.4.1",
     "vue-radial-progress": "^0.3.0",
     "vue-router": "^3.1.6",
+    "vue2-datepicker": "^3.5.0",
     "vuex": "^3.1.3"
   },
   "devDependencies": {

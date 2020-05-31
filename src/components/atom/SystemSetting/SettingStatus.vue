@@ -5,9 +5,6 @@
       class="flex flex-row justify-between w-full mt-5 rounded-lg p-5 blur"
     >
       <div class="flex flex-row">
-        <div class="mr-4 flex flex-col">
-          <font-awesome-icon :icon="['fas', 'cloud-moon']" class="text-white" />
-        </div>
         <div>
           <label class="text-xs font-black text-gray-500"
             >CURRENT SETTING</label

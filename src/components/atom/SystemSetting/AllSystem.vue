@@ -35,9 +35,7 @@
               style="border-right-color: transparent"
             >
               <div v-if="!confirmDelete || itemId !== value.id">
-                <button
-                  class="text-blue-700 text-xs hover:underline mr-2"
-                >
+                <button class="text-blue-700 text-xs hover:underline mr-2">
                   <font-awesome-icon :icon="['fas', 'edit']" /> Edit
                 </button>
                 <button
@@ -80,24 +78,24 @@
                 <input class="w-full bg-transparent h-6 px-2" type="text" />
               </td>
               <td class="px-4 py-4 border-b text-center border-gray-400">
-                <button
-                  @click="addNewSystem()"
-                  class="bg-white rounded shadow w-6 h-6 text-red-500 hover:text-red-700 mr-2"
-                >
-                  <font-awesome-icon :icon="['fas', 'times']" />
+                <button @click="saveSystem()" class="w-8 h-8 bg-white hover:bg-green-200 shadow rounded mx-1">
+                  <font-awesome-icon
+                    :icon="['fas', 'check']"
+                    class="text-green-500 text-"
+                  />
                 </button>
-                <button
-                  @click="saveSystem()"
-                  class="bg-white rounded shadow px-2 text-sm h-6 text-green-500 hover:text-green-700"
-                >
-                  <font-awesome-icon :icon="['fas', 'save']" /> Save
+                <button @click="addNewSystem()" class="w-8 h-8 bg-white hover:bg-red-200 shadow rounded">
+                  <font-awesome-icon
+                    :icon="['fas', 'times']"
+                    class="text-red-500 text-"
+                  />
                 </button>
               </td>
             </tr>
           </transition>
         </tbody>
       </table>
-      <br class="clear-both">
+      <br class="clear-both" />
     </div>
   </div>
 </template>
@@ -128,7 +126,7 @@ export default class AllSystem extends Vue {
     });
   }
 
-  removeItem(itemId:any) {
+  removeItem(itemId: any) {
     this.$data.confirmDelete = true;
     this.$data.itemId = itemId;
   }
