@@ -239,6 +239,19 @@ input:focus {
     background: linear-gradient(90deg, rgba(117,58,136,0.7) 0%, rgba(204,43,94,0.7) 100%);
 }
 
+.pink-purple-gradient-animated {
+    color: #fff;
+    background: rgb(204,43,94);
+    background: linear-gradient(90deg, rgba(204,43,94,0.7) 0%, rgba(117,58,136,0.7) 100%);
+    animation: animateGradient 10s ease infinite;
+}
+
+@keyframes animateGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .shore-gradient {
     background: #70e1f5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
@@ -359,6 +372,14 @@ input:focus {
     background: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.purplelove-gradient-animated {
+    background: #cc2b5e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cc2b5e, #753a88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: animateGradient 5s ease infinite;
+    background-size: 120% 120%;
+}
+
 .loading-frame {
     width: 50px;
     height: 110px;
@@ -401,4 +422,30 @@ hr.divider {
 .system-setting-disabled-form * {
     opacity: 0.7;
     color: #fff;
+}
+
+/* v = vertical */
+.v-blue-light-gradient {
+    background: linear-gradient(#8dcde6, #b6dced, #ffffff)
+}
+
+.v-teal-light-gradient {
+    background: linear-gradient(#69dac1, #ffffff)
+}
+
+.v-purple-light-gradient {
+    background: linear-gradient(#a173b1, #ffffff)
+}
+
+.v-red-light-gradient {
+    background: linear-gradient(#ff3d4c, #ffffff)
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+}
+
+.v-gray-dark-gradient {
+    background: linear-gradient(#2d3748, #ffffff)
 }

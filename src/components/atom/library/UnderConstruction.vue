@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full flex items-center justify-center flex-col py-12 border border-gray-400 shadow-lg rounded purplelove-gradient text-white"
+    class="w-full flex items-center justify-center flex-col py-12 border border-gray-400 shadow-lg rounded purplelove-gradient-animated text-white"
   >
     <font-awesome-icon :icon="['fas', 'tools']" size="4x" />
 
