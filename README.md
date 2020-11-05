@@ -3,6 +3,12 @@
 ## Jira Board
 https://karlo-personal.atlassian.net/jira/software/projects/AM/boards/1
 
+## Environment
+```
+npm 6.14.4
+node v13.12.0
+```
+
 ## Project setup
 ```
 npm install

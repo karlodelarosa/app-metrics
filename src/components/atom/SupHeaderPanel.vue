@@ -25,7 +25,7 @@
             :icon="['fas', 'user']"
             class="mr-1 text-gray-400"
           />
-          Karlo
+          {{ fullName }}
         </div>
       </div>
     </div>

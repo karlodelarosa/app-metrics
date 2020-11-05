@@ -8,7 +8,7 @@
           role="alert"
         >
           <font-awesome-icon :icon="['fas', 'spinner']" pulse />
-          <p class="font-bold">{{ getApiMessage }}</p>
+          <p class="font-bold">Authenticated!</p>
           <p class="text-xs">Please wait for a while</p>
         </div>
       </transition>
@@ -135,13 +135,16 @@ export default class Login extends Vue {
       this.$data.apiMessage = authenticationResponse.message;
 
       if (authenticationResponse.success) {
+        console.info(authenticationResponse);
+        localStorage.setItem('userInfo', JSON.stringify(authenticationResponse.response.data));
+        sessionStorage.setItem('userInfo', JSON.stringify(authenticationResponse.response.data));
         this.clearErrors();
         this.$data.loginSuccess = true;
         setTimeout(() => {
           this.$router.push("/dashboard");
         }, 1500);
       } else {
-        this.$data.errors.push(authenticationResponse.message);
+        this.$data.errors.push(authenticationResponse.error.message);
       }
     }
   }

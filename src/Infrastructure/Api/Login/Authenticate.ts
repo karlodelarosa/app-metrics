@@ -6,7 +6,7 @@ export interface AuthenticateInterface {
 }
 
 export class Authenticate implements AuthenticateInterface {
-  static URI = "/user/login/authentication";
+  static URI = "authenticate/";
   username = "";
   password = "";
 
@@ -14,12 +14,7 @@ export class Authenticate implements AuthenticateInterface {
     const params = new URLSearchParams();
     params.append("username", data.username);
     params.append("password", data.password);
-    const requestUrl =
-      Authenticate.URI +
-      "?username=" +
-      data.username +
-      "&password=" +
-      data.password;
+    const requestUrl = Authenticate.URI + data.username + "/password/" + data.password;
 
     return Request.axiosGet(requestUrl);
   }
