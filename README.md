@@ -1,5 +1,14 @@
 # app-metrics
 
+## Jira Board
+https://karlo-personal.atlassian.net/jira/software/projects/AM/boards/1
+
+## Environment
+```
+npm 6.14.4
+node v13.12.0
+```
+
 ## Project setup
 ```
 npm install
@@ -30,5 +39,31 @@ npm run test:e2e
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+--
+### Naming Convention
+For **Pages** use camel case
+```
+systemSettings
+```
+
+For **Components** use kebab case
+```
+sup-admin-panel
+```
+
+For **Router** use kebab case
+```
+system-settings
+```
+
+### Files
+Vue files use Pascal Case
+```
+SupAdmin.vue
+```
+
+Typescript files use Pascal case
+```
+AuthenticateUser.ts
+```
+
